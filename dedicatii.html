@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dedicații HitURI Artificiale</title>
+  <link rel="stylesheet" href="style-dedicatii.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="dedicatii.html">Dedicații 🎧</a></li>
+        <li><a href="https://www.youtube.com/@HitURIArtificiale" target="_blank">YouTube</a></li>
+        <li><a href="https://www.tiktok.com/@hituriartificiale" target="_blank">TikTok</a></li>
+      </ul>
+    </nav>
+    <h1>🎧 Trimite o dedicație muzicală personalizată!</h1>
+    <p>Transformă-ți mesajul într-un moment special cu artiștii noștri virtuali.</p>
+  </header>
+
+  <section id="form">
+    <form name="dedicatii" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="dedicatii">
+      <label for="nume">Nume complet</label>
+      <input type="text" id="nume" name="nume" required placeholder="Ex: Andrei Popescu">
+
+      <label for="email">Adresă de email (opțional)</label>
+      <input type="email" id="email" name="email" placeholder="Ex: adresa@email.com">
+
+      <label for="gen">Gen muzical preferat</label>
+      <select id="gen" name="gen" required>
+        <option value="">Selectează...</option>
+        <option value="manea">Manea</option>
+        <option value="trap">Trap</option>
+        <option value="latino">Latino</option>
+        <option value="pop-house">Pop-house</option>
+        <option value="altul">Altul</option>
+      </select>
+
+      <label for="mesaj">Mesajul dedicației</label>
+      <textarea id="mesaj" name="mesaj" rows="5" required placeholder="Scrie aici mesajul tău..."></textarea>
+
+      <button type="submit">Trimite dedicația 🚀</button>
+      <p id="confirm-msg" class="confirm-msg">Dedicația ta a fost trimisă cu succes 💌 Mulțumim că faci parte din povestea HitURI Artificiale.</p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 HitURI Artificiale – Toate drepturile rezervate.</p>
+  </footer>
+
+  <script>
+    const form = document.querySelector("form");
+    const confirmMsg = document.getElementById("confirm-msg");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      confirmMsg.style.display = "block";
+      confirmMsg.classList.add("show");
+      setTimeout(() => form.submit(), 300);
+    });
+  </script>
+</body>
+</html>

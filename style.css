@@ -1,0 +1,96 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0F1A28;
+  color: white;
+  margin: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+header {
+  background-color: #162334;
+  padding: 10px 0;
+  box-shadow: 0 0 10px #0005;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  margin: 0 15px;
+}
+nav a {
+  text-decoration: none;
+  color: #FF6459;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: white;
+}
+.logo {
+  width: 180px;
+  margin-top: 50px;
+  animation: pulse 3s infinite ease-in-out;
+}
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+.delay1 { animation-delay: 0.5s; }
+.delay2 { animation-delay: 1s; }
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.btn {
+  display: inline-block;
+  background-color: #FF6459;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  margin-top: 30px;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #ff7e73;
+  box-shadow: 0 0 15px #ff6459;
+}
+.glow {
+  animation: glowPulse 2.5s infinite;
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px #ff6459; }
+  50% { box-shadow: 0 0 20px #ff6459; }
+}
+.about {
+  max-width: 800px;
+  margin: 60px auto;
+  background: #162334;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #ff645920;
+}
+.about h2 {
+  color: #FF6459;
+}
+footer {
+  margin-top: 60px;
+  color: #888;
+  font-size: 0.9em;
+  background-color: #0F1A28;
+  padding: 20px;
+}
