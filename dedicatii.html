@@ -21,7 +21,7 @@
   </header>
 
   <section id="form">
-    <form name="dedicatii" method="POST" data-netlify="true">
+    <form name="dedicatii" method="POST" data-netlify="true" action="thanks.html">
       <input type="hidden" name="form-name" value="dedicatii">
       <label for="nume">Nume complet</label>
       <input type="text" id="nume" name="nume" required placeholder="Ex: Andrei Popescu">
@@ -43,24 +43,13 @@
       <textarea id="mesaj" name="mesaj" rows="5" required placeholder="Scrie aici mesajul tău..."></textarea>
 
       <button type="submit">Trimite dedicația 🚀</button>
-      <p id="confirm-msg" class="confirm-msg">Dedicația ta a fost trimisă cu succes 💌 Mulțumim că faci parte din povestea HitURI Artificiale.</p>
+
+      <p class="info-text">💡 După trimiterea formularului, vei fi redirecționat automat către pagina de confirmare <strong>„Mulțumim! 💖”</strong></p>
     </form>
   </section>
 
   <footer>
     <p>© 2025 HitURI Artificiale – Toate drepturile rezervate.</p>
   </footer>
-
-  <script>
-    const form = document.querySelector("form");
-    const confirmMsg = document.getElementById("confirm-msg");
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      confirmMsg.style.display = "block";
-      confirmMsg.classList.add("show");
-      setTimeout(() => form.submit(), 300);
-    });
-  </script>
 </body>
 </html>
